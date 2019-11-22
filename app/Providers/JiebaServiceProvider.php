@@ -27,6 +27,7 @@ class JiebaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        ini_set('memory_limit', '1024M');
         //结巴分词
         $this->app->singleton('Jieba', function () {
             $jieba = new Jieba();
