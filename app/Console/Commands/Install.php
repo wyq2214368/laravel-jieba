@@ -42,8 +42,10 @@ class Install extends Command
 
         $steps = [
             'composerInstall', //composer安装依赖
+            'laravelInstall', //laravel框架的配置项
             'laravelsPublish', //laravels配置文件发布
-            'startServer' //启动服务
+            'startServer', //启动服务
+
         ];
         $bar = $this->output->createProgressBar(count($steps));
         $bar->start();
@@ -75,7 +77,14 @@ class Install extends Command
     protected function startServer()
     {
         $this->info('启动laravels');
-        $this->line(shell_exec('php bin/laravels start -d'));
+        $result = shell_exec('php bin/laravels start -d');
+        if (strpos($result, 'ERROR') !== false) {
+            $this->error($result);
+            die;
+        }else{
+            $this->line($result);
+        }
+
         $config = config('laravels');
         $ip = $config['listen_ip'];
         $port = $config['listen_port'];
@@ -97,5 +106,20 @@ class Install extends Command
                 die;
             }
         }
+    }
+
+    protected function laravelInstall()
+    {
+        $this->info('设置laravel需要的相关配置');
+        var_dump(base_path('.env'));
+        if (!is_file(base_path('.env'))) {
+            $this->line('创建.env文件');
+            shell_exec('cp .env.example .env');
+            $this->line('生成laravel key');
+            shell_exec('php artisan key:generate');
+        }
+        $this->line('设置文件夹权限');
+        shell_exec('chmod -R 777 storage/');
+        shell_exec('chmod -R 777 bootstrap/cache/');
     }
 }
