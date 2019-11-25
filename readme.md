@@ -1,3 +1,6 @@
+## Just a simple server！
+
+结巴分词是一款优秀的中文分词库，之前在python应用中有使用，目前在php业务中需要接入，但对于php而言，fpm的形式导致每次请求的词典加载耗时过长，因此提供基于laravels的分词服务，方便快速部署简单场景下的分词服务。
 <p align="left">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
@@ -9,6 +12,26 @@
 | -------- | -------- |
 | [PHP](https://secure.php.net/manual/zh/install.php) | `>= 7.2.0` |
 | [Swoole扩展](https://www.swoole.com/) | `>= 4.x` `推荐4.2.3+` |
+
+## 功能示例（demo）
+>请自行修改get请求的content参数内容
+
+1. 中文分词
+
+    [http://analyse.buling.club/api/cut?content=我爱北京天安门](http://analyse.buling.club/api/cut?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+
+2. 关键词提取
+    
+    [http://analyse.buling.club/api/analyse?content=我爱北京天安门](http://analyse.buling.club/api/analyse?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+
+3. 分词位置标注
+
+    [http://analyse.buling.club/api/tokenize?content=我爱北京天安门](http://analyse.buling.club/api/tokenize?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+
+4. 分词词性标注
+
+    [http://analyse.buling.club/api/posseg?content=我爱北京天安门](http://analyse.buling.club/api/posseg?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+
 
 ## 安装
 *请先确保 [swoole](https://wiki.swoole.com/wiki/page/6.html)、[composer](https://docs.phpcomposer.com/00-intro.html) 已安装。如未安装可根据链接中的官方文档进行安装*
@@ -52,19 +75,12 @@
     > 如您启动的laravels服务，则需要使用laravels配置的端口(默认是 5200)
     
 
-## 功能示例（demo）
 
-1. 中文分词
 
-    [http://analyse.buling.club/api/cut?content=我爱北京天安门](http://analyse.buling.club/api/cut?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+## License
 
-2. 关键词提取
-    
-    [http://analyse.buling.club/api/analyse?content=我爱北京天安门](http://analyse.buling.club/api/analyse?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+[MIT](https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE)
 
-3. 分词位置标注
+## 感谢
 
-    [http://analyse.buling.club/api/tokenize?content=我爱北京天安门](http://analyse.buling.club/api/tokenize?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
-
-4. 分词词性标注
-    [http://analyse.buling.club/api/posseg?content=我爱北京天安门](http://analyse.buling.club/api/posseg?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+   欢迎star～
