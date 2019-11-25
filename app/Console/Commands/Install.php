@@ -77,10 +77,12 @@ class Install extends Command
     protected function startServer()
     {
         $this->info('启动laravels');
-        $result = shell_exec('php bin/laravels start -d');
+        shell_exec('php bin/laravels start -d > /tmp/laravel-jieba-laravels.log');
+        $result = file_get_contents('/tmp/laravel-jieba-laravels.log');
+//        if (shell_exec('ps -ef |grep -v bin/laravels |wc -l') <= 1) {
         if (strpos($result, 'ERROR') !== false) {
             $this->error($result);
-            die;
+            die('过程异常，已退出');
         }else{
             $this->line($result);
         }
