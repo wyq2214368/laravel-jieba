@@ -1,74 +1,70 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## 要求
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| 依赖 | 说明 |
+| -------- | -------- |
+| [PHP](https://secure.php.net/manual/zh/install.php) | `>= 7.2.0` |
+| [Swoole扩展](https://www.swoole.com/) | `>= 4.x` `推荐4.2.3+` |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 安装
+*请先确保 [swoole](https://wiki.swoole.com/wiki/page/6.html)、[composer](https://docs.phpcomposer.com/00-intro.html) 已安装。如未安装可根据链接中的官方文档进行安装*
+1. 克隆代码
+    ```
+    git clone https://github.com/wyq2214368/laravel-jieba.git
+    ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. composer安装依赖
+    ```
+    composer install
+    ```
+    
+   >以下的步骤是laravel及laravels的相关配置，您可以选择使用 `php artisan install` 指令一键完成。或根据相应文档完成设置
+3. 创建.env文件
+    ```
+    cp .env.example .env
+    ```
+    
+4. 生成laravel的key
+    ```
+    php artisan key:generate
+    ```
 
-## Learning Laravel
+5. 文件夹权限设置
+    ```
+    chmod -R 777 storage/
+    chmod -R 777 bootstrap/cache/
+    ```
+    >可视情况合理分配需要的权限
+    
+6. 启动服务
+    ```
+    php artisan serve
+    ```
+    > 如果您不想启动laravel server而是使用laravel是服务，可以通过 `php artisan install` 指令启动laravels服务，或通过[laravels文档](https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md#%E7%89%B9%E6%80%A7)自行启动
+    
+4. 访问并测试服务
+   
+   服务启动后可通过 [http://127.0.0.1:8000/api/cut?content=吃葡萄不吐葡萄皮]( http://127.0.0.1:8000/api/cut?content=%E5%90%83%E8%91%A1%E8%90%84%E4%B8%8D%E5%90%90%E8%91%A1%E8%90%84%E7%9A%AE)
+    > 如您启动的laravels服务，则需要使用laravels配置的端口(默认是 5200)
+    
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 功能示例（demo）
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. 中文分词
 
-## Laravel Sponsors
+    http://analyse.buling.club/api/cut?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. 关键词提取
+    
+    http://analyse.buling.club/api/analyse?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+3. 分词位置标注
 
-## Contributing
+    http://analyse.buling.club/api/tokenize?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. 分词词性标注
+    http://analyse.buling.club/api/posseg?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8
