@@ -65,7 +65,7 @@
     
     或分配php-fpm进程用户为所有者
     ```bash
-    choown -R apache:apache
+    choown -R apache:apache ./
     ```
     
 6. 启动服务
