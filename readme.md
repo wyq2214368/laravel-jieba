@@ -1,6 +1,6 @@
 ## Just a simple server！
 
-结巴分词是一款优秀的中文分词库，之前在python应用中有使用，目前在php业务中需要接入，但对于php而言，fpm的形式导致每次请求的词典加载耗时过长，因此提供基于laravels的分词服务，方便快速部署简单场景下的分词服务。
+结巴分词是一款优秀的中文分词库，之前在python应用中有使用，目前在php业务中需要接入，但对于php而言，fpm的形式导致每次请求的词典加载耗时过长，因此提供基于laravels（swoole）的分词服务，方便快速部署简单场景下的分词服务。
 <p align="left">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
