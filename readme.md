@@ -86,6 +86,9 @@
 
 [MIT](https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE)
 
-## 感谢
-
+## 鸣谢
+  - [fukuball/jieba-php](https://github.com/fukuball/jieba-php)
+  - [hhxsv5/laravel-s](https://github.com/hhxsv5/laravel-s)
+ 
+  
    欢迎star～
