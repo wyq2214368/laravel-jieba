@@ -18,19 +18,19 @@
 
 1. 中文分词
 
-    [http://analyse.buling.club/api/cut?content=我爱北京天安门](http://analyse.buling.club/api/cut?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+    [http://analyse.yaqi.wang/api/cut?content=我爱北京天安门](http://analyse.yaqi.wang/api/cut?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
 
 2. 关键词提取
     
-    [http://analyse.buling.club/api/analyse?content=我爱北京天安门](http://analyse.buling.club/api/analyse?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+    [http://analyse.yaqi.wang/api/analyse?content=我爱北京天安门](http://analyse.yaqi.wang/api/analyse?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
 
 3. 分词位置标注
 
-    [http://analyse.buling.club/api/tokenize?content=我爱北京天安门](http://analyse.buling.club/api/tokenize?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+    [http://analyse.yaqi.wang/api/tokenize?content=我爱北京天安门](http://analyse.yaqi.wang/api/tokenize?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
 
 4. 分词词性标注
 
-    [http://analyse.buling.club/api/posseg?content=我爱北京天安门](http://analyse.buling.club/api/posseg?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
+    [http://analyse.yaqi.wang/api/posseg?content=我爱北京天安门](http://analyse.yaqi.wang/api/posseg?content=%E6%88%91%E7%88%B1%E5%8C%97%E4%BA%AC%E5%A4%A9%E5%AE%89%E9%97%A8)
 
 
 ## 安装
