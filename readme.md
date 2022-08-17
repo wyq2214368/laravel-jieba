@@ -50,7 +50,6 @@
     ```
     cp .env.example .env
     ```
-    
 4. 生成laravel的key
     ```
     php artisan key:generate
@@ -72,16 +71,14 @@
     ```
     php artisan serve
     ```
-    > 如果您不想启动laravel server而是使用laravel是服务，可以通过 `php artisan install` 指令启动laravels服务，或通过[laravels文档](https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md#%E7%89%B9%E6%80%A7)自行启动
+    > 如果您不想启动laravel server而是使用laravels服务，可以通过 `php artisan install` 指令启动laravels服务，或通过[laravels文档](https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md#%E7%89%B9%E6%80%A7)自行启动
     
-4. 访问并测试服务
+7. 访问并测试服务
    
    服务启动后可通过 [http://127.0.0.1:8000/api/cut?content=吃葡萄不吐葡萄皮]( http://127.0.0.1:8000/api/cut?content=%E5%90%83%E8%91%A1%E8%90%84%E4%B8%8D%E5%90%90%E8%91%A1%E8%90%84%E7%9A%AE)
     > 如您启动的laravels服务，则需要使用laravels配置的端口(默认是 5200)
-    
 
-
-
+8. 如果需要切换词典，可以修改.env中的DICT_TYPE，jieba提供了big、normal、small三种规格，参考[其他詞典](https://github.com/fukuball/jieba-php#%E5%85%B6%E4%BB%96%E8%A9%9E%E5%85%B8)
 ## License
 
 [MIT](https://github.com/wyq2214368/laravel-jieba/blob/master/LICENSE)
