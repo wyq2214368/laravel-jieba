@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "368e0dec944a43e04907e7130285a083",
+    "content-hash": "cb223bb9d7bca2300b86310247a2aa1b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -541,28 +541,32 @@
         },
         {
             "name": "hhxsv5/laravel-s",
-            "version": "v3.5.17",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hhxsv5/laravel-s.git",
-                "reference": "61f9d90a151f0a4d7c51962b0e5decc859d90686"
+                "reference": "829f646e7c22d2664cf3cbdeea97bcc1687a4a24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hhxsv5/laravel-s/zipball/61f9d90a151f0a4d7c51962b0e5decc859d90686",
-                "reference": "61f9d90a151f0a4d7c51962b0e5decc859d90686",
+                "url": "https://api.github.com/repos/hhxsv5/laravel-s/zipball/829f646e7c22d2664cf3cbdeea97bcc1687a4a24",
+                "reference": "829f646e7c22d2664cf3cbdeea97bcc1687a4a24",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "ext-json": "*",
                 "ext-pcntl": "*",
                 "php": ">=5.5.9",
                 "swoole/ide-helper": "@dev",
                 "symfony/console": ">=2.7.0"
             },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8.36"
+            },
             "suggest": {
-                "ext-inotify": "Inotify, used to reload all worker processes when your code is modified.",
-                "ext-swoole": "Event-driven asynchronous & concurrent & coroutine networking engine with high performance for PHP, require >= 1.7.19."
+                "ext-inotify": "Inotify, used to real-time reload.",
+                "ext-swoole": "Coroutine-based concurrency library for PHP, require >= 1.7.19."
             },
             "bin": [
                 "bin/fswatch"
@@ -590,9 +594,10 @@
                     "email": "hhxsv5@sina.com"
                 }
             ],
-            "description": "🚀LaravelS is like a glue that is used to quickly integrate Swoole into Laravel or Lumen, and then give them better performance and more possibilities.",
+            "description": "🚀 LaravelS is an out-of-the-box adapter between Swoole and Laravel/Lumen.",
             "homepage": "https://github.com/hhxsv5/laravel-s",
             "keywords": [
+                "LaravelS",
                 "async",
                 "coroutine",
                 "http",
@@ -610,7 +615,21 @@
                 "udp",
                 "websocket"
             ],
-            "time": "2019-12-28T09:48:55+00:00"
+            "funding": [
+                {
+                    "url": "https://gitee.com/hhxsv5/laravel-s?donate=true",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.blockchain.com/btc/address/367HnAzVTAEk8offesDhcsCQswnugsE54u",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/hhxsv5",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-08-15T07:53:57+00:00"
         },
         {
             "name": "laravel/framework",
